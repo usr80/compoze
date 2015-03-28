@@ -8,5 +8,5 @@ compile :
 
 deploy :
 	jade .
-	git commit -m "deploy"
+	git commit -am "deploy"
 	git push

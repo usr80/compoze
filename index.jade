@@ -6,17 +6,34 @@ html(lang="zh-CN")
     meta(name="viewport",content="width=device-width, initial-scale=1")
     link(rel="stylesheet",href="app/style/base.css")
     link(rel="stylesheet",href="app/style/font.css")
+    style.
+      a{
+        text-decoration:none;
+        color: #666;
+        font-size:18px;
+      }
   body
 
     div.logo.icon &#xe600;
 
 
     div(style="text-align:center;margin-top:80px;")
+      a(href="app/html/player.html")
+        span.icon &#xe603;
+        |&nbsp;
+        |播放模式
+    div(style="text-align:center;margin-top:80px;")
+      a(href="app/html/editor.html")
+        span.icon &#xe604;
+        |&nbsp;
+        |编辑模式
 
-      h2
-        a(href="app/html/player.html") 播放器
-      h2
-        a(href="app/html/editor.html") 编辑器
+    div(style="text-align:center;margin-top:80px;")
+      a(href="app/html/helper.html")
+        span.icon &#xe605;
+        |&nbsp;
+        |使用介绍
+
 
     .loading.line-scale
       div
@@ -24,4 +41,3 @@ html(lang="zh-CN")
       div
       div
       div
-

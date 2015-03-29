@@ -7,7 +7,7 @@ $ = require('jquery')
 Vex = require('vexflow')
 Artist = require('./artist.coffee')
 VexTab = require('./vextab.coffee')
-
+Player = require('./player.coffee')
 Vex.Flow.TabDiv = function(sel, options) {
   if (arguments.length > 0) this.init(sel, options);
 }
@@ -25,12 +25,12 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
   this.code = $(sel).text();
   $(sel).empty();
   if ($(sel).css("position") == "static") {
-    $(sel).css("position", "relative");
+    // $(sel).css("position", "relative");
   }
 
   // Get tabdiv properties
   this.width = parseInt($(sel).attr("width")) || 400;
-  this.height = parseInt($(sel).attr("height")) || 100;
+  this.height = parseInt($(sel).attr("height")) || 200;
   this.scale = parseFloat($(sel).attr("scale")) || 1.0;
 
   // If the Raphael.js sources are included, then use Raphael, else
@@ -57,13 +57,14 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
   this.editor = $(sel).attr("editor") || "";
   this.show_errors = $(sel).attr("show-errors") || "";
   this.editor_width= $(sel).attr("editor_width") || this.width;
-  this.editor_height= $(sel).attr("editor_height") || 100;
+  this.editor_height= $(sel).attr("editor_height") || 200;
 
   var that = this;
   if (this.editor == "true") {
     this.text_area = $('<textarea></textarea>').addClass("editor").
       val(this.code);
-    this.editor_error = $('<div></div>').addClass("editor-error");
+    this.editor_error = $('<md-toast></md-toast>').addClass("md-default-theme md-top md-right has-error");
+    $(sel).addClass('has-editor');
     $(sel).append($('<p/>')).append(this.editor_error);
     $(sel).append($('<p/>')).append(this.text_area);
     this.text_area.width(this.editor_width);
@@ -80,7 +81,7 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
           }, 250);
     });
   } if (this.show_errors == "true") {
-    this.editor_error = $('<div></div>').addClass("editor-error");
+    this.editor_error = $('<md-toast></md-toast>').addClass("md-default-theme md-top md-right")
     $(sel).append($('<p/>')).append(this.editor_error);
   }
 
@@ -115,10 +116,10 @@ Vex.Flow.TabDiv.prototype.parseInternal = function() {
     this.artist.reset();
     this.parser.reset();
     this.parser.parse(this.code);
-    this.editor_error.empty();
+    this.editor_error.empty().hide();
   } catch (e) {
     if (this.editor_error) {
-      this.editor_error.empty();
+      this.editor_error.empty().show();
       this.editor_error.append(
           $('<div></div>').addClass("text").html(
             "Sucky VexTab: " + e.message));

@@ -72,12 +72,12 @@
   }
 */
 var parser = (function(){
-var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,6],$V1=[1,7],$V2=[1,8],$V3=[1,9],$V4=[5,11,13,14,15],$V5=[5,11,13,14,15,17,19,21],$V6=[2,17],$V7=[1,14],$V8=[5,11,13,14,15,17,19,21,22],$V9=[1,18],$Va=[1,19],$Vb=[1,20],$Vc=[1,21],$Vd=[1,43],$Ve=[1,32],$Vf=[1,33],$Vg=[1,42],$Vh=[1,41],$Vi=[1,39],$Vj=[1,48],$Vk=[1,55],$Vl=[1,50],$Vm=[1,51],$Vn=[1,52],$Vo=[1,53],$Vp=[1,54],$Vq=[1,56],$Vr=[1,44],$Vs=[1,45],$Vt=[1,46],$Vu=[1,47],$Vv=[1,57],$Vw=[5,11,13,14,15,17,19,21,25],$Vx=[5,11,13,14,15,17,19,21,23,31,32,37,38,45,48,57,61,62,63,64,65,66,70,71,73,75,76],$Vy=[2,79],$Vz=[1,67],$VA=[1,64],$VB=[1,65],$VC=[1,66],$VD=[1,73],$VE=[1,74],$VF=[1,78],$VG=[1,79],$VH=[1,80],$VI=[1,81],$VJ=[41,57,59,61,62,63,64,65,66,67,68,69],$VK=[38,45,48,76],$VL=[41,48,57,59,61,62,63,64,65,66,67,68,69,81],$VM=[5,11,13,14,15,17,19,21,23,31,32,37,38,41,45,48,57,61,62,63,64,65,66,70,71,73,75,76],$VN=[1,101],$VO=[44,46],$VP=[2,63],$VQ=[1,106],$VR=[5,11,13,14,15,17,19,21,23,31,32,37,38,45,48,57,59,61,62,63,64,65,66,70,71,73,75,76],$VS=[5,11,13,14,15,17,19,21,23,31,32,37,38,45,48,57,59,60,61,62,63,64,65,66,70,71,73,75,76],$VT=[25,71],$VU=[41,48,57,59,61,62,63,64,65,66,67,68,69],$VV=[5,11,13,14,15,17,19,21,23,31,32,37,38,44,45,46,48,57,61,62,63,64,65,66,70,71,73,75,76];
+var o=function(k,v,o,l){for(o=o||{},l=k.length;l--;o[k[l]]=v);return o},$V0=[1,6],$V1=[1,7],$V2=[1,8],$V3=[1,9],$V4=[5,11,13,14,15],$V5=[5,11,13,14,15,17,19,21],$V6=[2,17],$V7=[1,14],$V8=[5,11,13,14,15,17,19,21,22],$V9=[1,18],$Va=[1,19],$Vb=[1,20],$Vc=[1,21],$Vd=[1,43],$Ve=[1,32],$Vf=[1,33],$Vg=[1,42],$Vh=[1,41],$Vi=[1,39],$Vj=[1,48],$Vk=[1,55],$Vl=[1,50],$Vm=[1,51],$Vn=[1,52],$Vo=[1,53],$Vp=[1,54],$Vq=[1,56],$Vr=[1,44],$Vs=[1,45],$Vt=[1,46],$Vu=[1,47],$Vv=[1,57],$Vw=[5,11,13,14,15,17,19,21,25],$Vx=[5,11,13,14,15,17,19,21,23,31,32,37,38,46,49,58,62,63,64,65,66,67,71,72,74,76,77],$Vy=[2,80],$Vz=[1,67],$VA=[1,64],$VB=[1,65],$VC=[1,66],$VD=[1,73],$VE=[1,74],$VF=[1,78],$VG=[1,79],$VH=[1,80],$VI=[1,81],$VJ=[41,58,60,62,63,64,65,66,67,68,69,70],$VK=[38,46,49,77],$VL=[41,49,58,60,62,63,64,65,66,67,68,69,70,82],$VM=[5,11,13,14,15,17,19,21,23,31,32,37,38,41,46,49,58,62,63,64,65,66,67,71,72,74,76,77],$VN=[1,101],$VO=[1,102],$VP=[44,45,47],$VQ=[2,64],$VR=[1,107],$VS=[5,11,13,14,15,17,19,21,23,31,32,37,38,46,49,58,60,62,63,64,65,66,67,71,72,74,76,77],$VT=[5,11,13,14,15,17,19,21,23,31,32,37,38,46,49,58,60,61,62,63,64,65,66,67,71,72,74,76,77],$VU=[25,72],$VV=[41,49,58,60,62,63,64,65,66,67,68,69,70],$VW=[5,11,13,14,15,17,19,21,23,31,32,37,38,44,45,46,47,49,58,62,63,64,65,66,67,71,72,74,76,77];
 var parser = {trace: function trace() { },
 yy: {},
-symbols_: {"error":2,"e":3,"maybe_vextab":4,"EOF":5,"vextab":6,"stave":7,"voice":8,"maybe_options":9,"stave_data":10,"OPTIONS":11,"options":12,"TABSTAVE":13,"STAVE":14,"VOICE":15,"stave_additions":16,"TEXT":17,"text":18,"NOTES":19,"notes":20,"SLUR":21,"WORD":22,"=":23,"STR":24,",":25,"lingo":26,"line":27,"chord":28,"time":29,"bar":30,"[":31,"]":32,"tuplets":33,"annotations":34,"command":35,"rest":36,"|":37,":":38,"frets":39,"maybe_decorator":40,"/":41,"string":42,"chord_line":43,".":44,"(":45,")":46,"articulation":47,"NUMBER":48,"abc":49,"_":50,"timed_fret":51,"time_values":52,"maybe_dot":53,"time_unit":54,"maybe_slash":55,"w":56,"h":57,"q":58,"d":59,"S":60,"-":61,"s":62,"t":63,"T":64,"b":65,"p":66,"v":67,"V":68,"u":69,"^":70,"$":71,"annotation_words":72,"!":73,"COMMAND":74,"#":75,"ABC":76,"abc_accidental":77,"accidental_type":78,"@":79,"n":80,"~":81,"$accept":0,"$end":1},
-terminals_: {2:"error",5:"EOF",11:"OPTIONS",13:"TABSTAVE",14:"STAVE",15:"VOICE",17:"TEXT",19:"NOTES",21:"SLUR",22:"WORD",23:"=",24:"STR",25:",",31:"[",32:"]",37:"|",38:":",41:"/",44:".",45:"(",46:")",48:"NUMBER",50:"_",56:"w",57:"h",58:"q",59:"d",60:"S",61:"-",62:"s",63:"t",64:"T",65:"b",66:"p",67:"v",68:"V",69:"u",70:"^",71:"$",73:"!",74:"COMMAND",75:"#",76:"ABC",79:"@",80:"n",81:"~"},
-productions_: [0,[3,2],[4,0],[4,1],[6,1],[6,2],[7,3],[7,2],[7,2],[8,1],[8,1],[8,1],[10,1],[10,2],[16,2],[16,2],[16,2],[9,0],[9,1],[12,3],[12,4],[18,1],[18,3],[20,1],[20,2],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[30,1],[30,3],[30,3],[30,3],[30,3],[30,3],[27,4],[43,1],[43,3],[28,4],[28,5],[39,1],[39,1],[39,4],[39,2],[39,4],[51,5],[51,1],[51,5],[51,8],[51,1],[51,4],[29,3],[52,2],[54,1],[54,1],[54,1],[54,1],[53,0],[53,1],[55,0],[55,1],[42,1],[47,1],[47,1],[47,1],[47,1],[47,1],[47,1],[47,1],[40,1],[40,1],[40,1],[40,1],[40,0],[33,3],[33,5],[34,3],[72,1],[72,3],[35,3],[36,2],[36,3],[36,4],[49,3],[77,1],[77,2],[77,1],[77,2],[77,1],[77,0],[78,0],[78,1]],
+symbols_: {"error":2,"e":3,"maybe_vextab":4,"EOF":5,"vextab":6,"stave":7,"voice":8,"maybe_options":9,"stave_data":10,"OPTIONS":11,"options":12,"TABSTAVE":13,"STAVE":14,"VOICE":15,"stave_additions":16,"TEXT":17,"text":18,"NOTES":19,"notes":20,"SLUR":21,"WORD":22,"=":23,"STR":24,",":25,"lingo":26,"line":27,"chord":28,"time":29,"bar":30,"[":31,"]":32,"tuplets":33,"annotations":34,"command":35,"rest":36,"|":37,":":38,"frets":39,"maybe_decorator":40,"/":41,"string":42,"chord_line":43,".":44,"+":45,"(":46,")":47,"articulation":48,"NUMBER":49,"abc":50,"_":51,"timed_fret":52,"time_values":53,"maybe_dot":54,"time_unit":55,"maybe_slash":56,"w":57,"h":58,"q":59,"d":60,"S":61,"-":62,"s":63,"t":64,"T":65,"b":66,"p":67,"v":68,"V":69,"u":70,"^":71,"$":72,"annotation_words":73,"!":74,"COMMAND":75,"#":76,"ABC":77,"abc_accidental":78,"accidental_type":79,"@":80,"n":81,"~":82,"$accept":0,"$end":1},
+terminals_: {2:"error",5:"EOF",11:"OPTIONS",13:"TABSTAVE",14:"STAVE",15:"VOICE",17:"TEXT",19:"NOTES",21:"SLUR",22:"WORD",23:"=",24:"STR",25:",",31:"[",32:"]",37:"|",38:":",41:"/",44:".",45:"+",46:"(",47:")",49:"NUMBER",51:"_",57:"w",58:"h",59:"q",60:"d",61:"S",62:"-",63:"s",64:"t",65:"T",66:"b",67:"p",68:"v",69:"V",70:"u",71:"^",72:"$",74:"!",75:"COMMAND",76:"#",77:"ABC",80:"@",81:"n",82:"~"},
+productions_: [0,[3,2],[4,0],[4,1],[6,1],[6,2],[7,3],[7,2],[7,2],[8,1],[8,1],[8,1],[10,1],[10,2],[16,2],[16,2],[16,2],[9,0],[9,1],[12,3],[12,4],[18,1],[18,3],[20,1],[20,2],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[26,1],[30,1],[30,3],[30,3],[30,3],[30,3],[30,3],[27,4],[43,1],[43,3],[43,3],[28,4],[28,5],[39,1],[39,1],[39,4],[39,2],[39,4],[52,5],[52,1],[52,5],[52,8],[52,1],[52,4],[29,3],[53,2],[55,1],[55,1],[55,1],[55,1],[54,0],[54,1],[56,0],[56,1],[42,1],[48,1],[48,1],[48,1],[48,1],[48,1],[48,1],[48,1],[40,1],[40,1],[40,1],[40,1],[40,0],[33,3],[33,5],[34,3],[73,1],[73,3],[35,3],[36,2],[36,3],[36,4],[50,3],[78,1],[78,2],[78,1],[78,2],[78,1],[78,0],[79,0],[79,1]],
 performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */) {
 /* this == yyval */
 
@@ -86,19 +86,19 @@ switch (yystate) {
 case 1:
 
       return $$[$0-1];
-
+    
 break;
-case 2: case 17: case 79:
- this.$ = null
+case 2: case 17: case 80:
+ this.$ = null 
 break;
-case 3: case 12: case 18: case 23: case 25: case 26: case 27: case 42: case 59: case 60: case 61: case 62: case 67:
- this.$ = $$[$0]
+case 3: case 12: case 18: case 23: case 25: case 26: case 27: case 42: case 60: case 61: case 62: case 63: case 68:
+ this.$ = $$[$0] 
 break;
-case 4: case 83:
- this.$ = [$$[$0]]
+case 4: case 84:
+ this.$ = [$$[$0]] 
 break;
 case 5:
- this.$ = [].concat($$[$0-1], $$[$0])
+ this.$ = [].concat($$[$0-1], $$[$0]) 
 break;
 case 6:
  this.$ = {
@@ -109,7 +109,7 @@ case 6:
         _l: _$[$0-2].first_line,
         _c: _$[$0-2].first_column
       }
-
+    
 break;
 case 7:
  this.$ = {
@@ -118,7 +118,7 @@ case 7:
         _l: _$[$0-1].first_line,
         _c: _$[$0-1].first_column
       }
-
+    
 break;
 case 8:
 
@@ -128,7 +128,7 @@ case 8:
         _l: _$[$0-1].first_line,
         _c: _$[$0-1].first_column
       }
-
+    
 break;
 case 13:
 
@@ -136,7 +136,7 @@ case 13:
       var notes = [].concat($$[$0-1].notes, $$[$0].notes);
       var slurs = [].concat($$[$0-1].slurs, $$[$0].slurs)
       this.$ = {text: text, notes: notes, slurs: slurs};
-
+    
 break;
 case 14:
 this.$ = {text: $$[$0], notes: [], slurs: []}
@@ -154,7 +154,7 @@ case 19:
         _l: _$[$0-2].first_line,
         _c: _$[$0-2].first_column
       }]
-
+    
 break;
 case 20:
  this.$ = [].concat($$[$0-3], [{
@@ -163,16 +163,16 @@ case 20:
         _l: _$[$0-2].first_line,
         _c: _$[$0-2].first_column
         }])
-
+    
 break;
 case 21:
- this.$ = [{text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}]
+ this.$ = [{text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}] 
 break;
 case 22:
- this.$ = [].concat($$[$0-2], {text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column})
+ this.$ = [].concat($$[$0-2], {text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}) 
 break;
 case 24:
- this.$ = [].concat($$[$0-1], $$[$0])
+ this.$ = [].concat($$[$0-1], $$[$0])  
 break;
 case 28:
  this.$ = [{
@@ -181,7 +181,7 @@ case 28:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
         }]
-
+    
 break;
 case 29:
  this.$ = [{
@@ -189,7 +189,7 @@ case 29:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 30:
  this.$ = [{
@@ -197,7 +197,7 @@ case 30:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 31:
  this.$ = [{
@@ -206,7 +206,7 @@ case 31:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 32:
  this.$ = [{
@@ -215,7 +215,7 @@ case 32:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 33:
  this.$ = [{
@@ -224,7 +224,7 @@ case 33:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 34:
 
@@ -232,181 +232,181 @@ case 34:
         command: "rest",
         params: $$[$0]
       }]
-
+    
 break;
 case 35:
- this.$ = 'single'
+ this.$ = 'single' 
 break;
 case 36:
- this.$ = 'double'
+ this.$ = 'double' 
 break;
 case 37:
- this.$ = 'end'
+ this.$ = 'end' 
 break;
 case 38:
- this.$ = 'repeat-end'
+ this.$ = 'repeat-end' 
 break;
 case 39:
- this.$ = 'repeat-begin'
+ this.$ = 'repeat-begin' 
 break;
 case 40:
- this.$ = 'repeat-both'
+ this.$ = 'repeat-both' 
 break;
 case 41:
 
       _.extend(_.last($$[$0-3]), {decorator: $$[$0-2]})
       _.each($$[$0-3], function(fret) { fret['string'] = $$[$0] })
       this.$ = $$[$0-3]
-
+    
 break;
-case 43: case 84:
- this.$ = [].concat($$[$0-2], $$[$0])
-break;
-case 44:
- this.$ = [{chord: $$[$0-2], decorator: $$[$0]}]
+case 43: case 44: case 85:
+ this.$ = [].concat($$[$0-2], $$[$0]) 
 break;
 case 45:
- this.$ = [{chord: $$[$0-2], articulation: $$[$0-4], decorator: $$[$0]}]
+ this.$ = [{chord: $$[$0-2], decorator: $$[$0]}] 
 break;
 case 46:
+ this.$ = [{chord: $$[$0-2], articulation: $$[$0-4], decorator: $$[$0]}] 
+break;
+case 47:
  this.$ = [{
         fret: $$[$0],
         _l: _$[$0].first_line,
         _c: _$[$0].first_column}]
-
-break;
-case 47:
- this.$ = [{abc: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}]
+    
 break;
 case 48:
+ this.$ = [{abc: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}]
+break;
+case 49:
  this.$ = [{abc: $$[$0-3], octave: $$[$0-2],
              fret: $$[$0], _l: _$[$0-3].first_line, _c: _$[$0-3].first_column}]
 break;
-case 49:
- this.$ = [_.extend($$[$0], {articulation: $$[$0-1]})]
-break;
 case 50:
+ this.$ = [_.extend($$[$0], {articulation: $$[$0-1]})] 
+break;
+case 51:
 
       _.extend(_.last($$[$0-3]), {decorator: $$[$0-2]})
       _.extend($$[$0], {articulation: $$[$0-1]})
       $$[$0-3].push($$[$0])
       this.$ = $$[$0-3]
-
+    
 break;
-case 51:
+case 52:
  this.$ = {
       time: $$[$0-3], dot: $$[$0-2], fret: $$[$0],
       _l: _$[$0-4].first_line, _c: _$[$0-4].first_column}
 break;
-case 52:
- this.$ = {fret: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}
-break;
 case 53:
- this.$ = {time: $$[$0-3], dot: $$[$0-2], abc: $$[$0]}
+ this.$ = {fret: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column} 
 break;
 case 54:
- this.$ = {time: $$[$0-6], dot: $$[$0-5], abc: $$[$0-3], octave: $$[$0-2], fret: $$[$0]}
+ this.$ = {time: $$[$0-3], dot: $$[$0-2], abc: $$[$0]}
 break;
 case 55:
- this.$ = {abc: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}
+ this.$ = {time: $$[$0-6], dot: $$[$0-5], abc: $$[$0-3], octave: $$[$0-2], fret: $$[$0]}
 break;
 case 56:
- this.$ = {abc: $$[$0-3], octave: $$[$0-2],
-            fret: $$[$0], _l: _$[$0-3].first_line, _c: _$[$0-3].first_column}
+ this.$ = {abc: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column} 
 break;
 case 57:
- this.$ = {time: $$[$0-1], dot: $$[$0]}
+ this.$ = {abc: $$[$0-3], octave: $$[$0-2],
+            fret: $$[$0], _l: _$[$0-3].first_line, _c: _$[$0-3].first_column} 
 break;
 case 58:
- this.$ = $$[$0-1] + $$[$0]
+ this.$ = {time: $$[$0-1], dot: $$[$0]} 
 break;
-case 63:
- this.$ = false
+case 59:
+ this.$ = $$[$0-1] + $$[$0] 
 break;
 case 64:
- this.$ = true
+ this.$ = false 
 break;
 case 65:
- this.$ = ''
+ this.$ = true 
 break;
-case 66: case 69:
- this.$ = 's'
+case 66:
+ this.$ = '' 
 break;
-case 68:
- this.$ = '-'
+case 67: case 70:
+ this.$ = 's' 
 break;
-case 70:
- this.$ = 't'
+case 69:
+ this.$ = '-' 
 break;
 case 71:
- this.$ = 'T'
+ this.$ = 't' 
 break;
 case 72:
- this.$ = 'b'
+ this.$ = 'T' 
 break;
 case 73:
- this.$ = 'h'
+ this.$ = 'b' 
 break;
 case 74:
- this.$ = 'p'
+ this.$ = 'h' 
 break;
 case 75:
- this.$ = 'v'
+ this.$ = 'p' 
 break;
 case 76:
- this.$ = 'V'
+ this.$ = 'v' 
 break;
 case 77:
- this.$ = 'u'
+ this.$ = 'V' 
 break;
 case 78:
- this.$ = 'd'
+ this.$ = 'u' 
 break;
-case 80:
- this.$ = {tuplet: $$[$0-1]}
+case 79:
+ this.$ = 'd' 
 break;
 case 81:
- this.$ = {tuplet: $$[$0-3], notes: $$[$0-1]}
+ this.$ = {tuplet: $$[$0-1]} 
 break;
-case 82: case 85:
- this.$ = $$[$0-1]
+case 82:
+ this.$ = {tuplet: $$[$0-3], notes: $$[$0-1]} 
 break;
-case 86:
- this.$ = {position: 0}
+case 83: case 86:
+ this.$ = $$[$0-1] 
 break;
 case 87:
- this.$ = {position: $$[$0-1]}
+ this.$ = {position: 0} 
 break;
 case 88:
- this.$ = {position: $$[$0-1] * -1}
+ this.$ = {position: $$[$0-1]} 
 break;
 case 89:
- this.$ = {key: $$[$0-2], accidental: $$[$0-1], accidental_type: $$[$0]}
+ this.$ = {position: $$[$0-1] * -1} 
 break;
 case 90:
- this.$ = "#"
+ this.$ = {key: $$[$0-2], accidental: $$[$0-1], accidental_type: $$[$0]} 
 break;
 case 91:
- this.$ = "##"
+ this.$ = "#" 
 break;
 case 92:
- this.$ = "b"
+ this.$ = "##" 
 break;
 case 93:
- this.$ = "bb"
+ this.$ = "b" 
 break;
 case 94:
- this.$ = "n"
+ this.$ = "bb" 
 break;
-case 96:
- this.$ = null;
+case 95:
+ this.$ = "n" 
 break;
 case 97:
- this.$ = "c"
+ this.$ = null; 
+break;
+case 98:
+ this.$ = "c" 
 break;
 }
 },
-table: [{3:1,4:2,5:[2,2],6:3,7:4,8:5,11:$V0,13:$V1,14:$V2,15:$V3},{1:[3]},{5:[1,10]},{5:[2,3],7:11,8:5,11:$V0,13:$V1,14:$V2,15:$V3},o($V4,[2,4]),o($V5,$V6,{9:12,12:13,22:$V7}),{12:15,22:$V7},o($V8,[2,9]),o($V8,[2,10]),o($V8,[2,11]),{1:[2,1]},o($V4,[2,5]),o($V4,[2,7],{10:16,16:17,17:$V9,19:$Va,21:$Vb}),o($V5,[2,18],{22:$Vc}),{23:[1,22]},o($V4,[2,8],{22:$Vc}),o($V4,[2,6],{16:23,17:$V9,19:$Va,21:$Vb}),o($V5,[2,12]),{18:24,24:[1,25]},{20:26,23:$Vd,26:27,27:28,28:29,29:30,30:31,31:$Ve,32:$Vf,33:34,34:35,35:36,36:37,37:$Vg,38:$Vh,39:38,45:$Vi,47:40,48:$Vj,49:49,57:$Vk,61:$Vl,62:$Vm,63:$Vn,64:$Vo,65:$Vp,66:$Vq,70:$Vr,71:$Vs,73:$Vt,75:$Vu,76:$Vv},o($V5,$V6,{12:13,9:58,22:$V7}),{23:[1,59]},{22:[1,60]},o($V5,[2,13]),o($V5,[2,14],{25:[1,61]}),o($Vw,[2,21]),o($V5,[2,15],{27:28,28:29,29:30,30:31,33:34,34:35,35:36,36:37,39:38,47:40,49:49,26:62,23:$Vd,31:$Ve,32:$Vf,37:$Vg,38:$Vh,45:$Vi,48:$Vj,57:$Vk,61:$Vl,62:$Vm,63:$Vn,64:$Vo,65:$Vp,66:$Vq,70:$Vr,71:$Vs,73:$Vt,75:$Vu,76:$Vv}),o($Vx,[2,23]),o($Vx,[2,25]),o($Vx,[2,26]),o($Vx,[2,27]),o($Vx,[2,28]),o($Vx,[2,29]),o($Vx,[2,30]),o($Vx,[2,31]),o($Vx,[2,32]),o($Vx,[2,33]),o($Vx,[2,34]),o([41,57,61,62,63,64,65,66],$Vy,{40:63,59:$Vz,67:$VA,68:$VB,69:$VC}),{27:69,39:38,43:68,47:70,48:$Vj,49:49,57:$Vk,61:$Vl,62:$Vm,63:$Vn,64:$Vo,65:$Vp,66:$Vq,76:$Vv},{38:$VD,45:[1,71],48:$VE,49:75,51:72,76:$Vv},{48:$VF,52:76,54:77,56:$VG,57:$VH,58:$VI},o($Vx,[2,35]),{37:[1,82],38:[1,83]},{48:[1,84]},{22:[1,86],72:85},{74:[1,87]},{48:[1,89],61:[1,90],75:[1,88]},o($VJ,[2,46]),o($VJ,[2,47],{48:[1,91]}),o($VK,[2,68]),o($VK,[2,69]),o($VK,[2,70]),o($VK,[2,71]),o($VK,[2,72]),o($VK,[2,73]),o($VK,[2,74]),o($VL,[2,95],{77:92,75:[1,93],79:[1,94],80:[1,95]}),o($V5,[2,16]),{22:[1,96]},o($V8,[2,19]),{24:[1,97]},o($Vx,[2,24]),{41:[1,98],47:99,57:$Vk,61:$Vl,62:$Vm,63:$Vn,64:$Vo,65:$Vp,66:$Vq},o($VM,[2,75]),o($VM,[2,76]),o($VM,[2,77]),o($VM,[2,78]),{44:$VN,46:[1,100]},o($VO,[2,42]),{38:$VD,48:$VE,49:75,51:72,76:$Vv},{27:69,39:38,43:102,47:70,48:$Vj,49:49,57:$Vk,61:$Vl,62:$Vm,63:$Vn,64:$Vo,65:$Vp,66:$Vq,76:$Vv},o($VJ,[2,49]),{48:$VF,52:103,54:77,56:$VG,57:$VH,58:$VI},o($VJ,[2,52]),o($VJ,[2,55],{48:[1,104]}),o($Vx,$VP,{53:105,59:$VQ}),o($VR,[2,65],{55:107,60:[1,108]}),o($VS,[2,59]),o($VS,[2,60]),o($VS,[2,61]),o($VS,[2,62]),{23:[1,110],37:[1,109],38:[1,111]},{37:[1,112],38:[1,113]},{25:[1,115],70:[1,114]},{25:[1,117],71:[1,116]},o($VT,[2,83]),{73:[1,118]},o($Vx,[2,86]),{75:[1,119]},{48:[1,120]},{50:[1,121]},o($VU,[2,96],{78:122,81:[1,123]}),o($VL,[2,90],{75:[1,124]}),o($VL,[2,92],{79:[1,125]}),o($VL,[2,94]),o($V8,[2,20]),o($Vw,[2,22]),{42:126,48:[1,127]},{38:$VD,48:$VE,49:75,51:128,76:$Vv},o($Vx,$Vy,{40:129,59:$Vz,67:$VA,68:$VB,69:$VC}),{27:130,39:38,47:70,48:$Vj,49:49,57:$Vk,61:$Vl,62:$Vm,63:$Vn,64:$Vo,65:$Vp,66:$Vq,76:$Vv},{44:$VN,46:[1,131]},{38:$VP,53:132,59:$VQ},{50:[1,133]},o($Vx,[2,57]),o($Vx,[2,64]),o($VR,[2,58]),o($VR,[2,66]),o($Vx,[2,36]),o($Vx,[2,37]),o($Vx,[2,39]),o($Vx,[2,38]),o($Vx,[2,40]),o($Vx,[2,80]),{48:[1,134]},o($Vx,[2,82]),{22:[1,135]},o($Vx,[2,85]),o($Vx,[2,87]),{75:[1,136]},{48:[1,137]},o($VU,[2,89]),o($VU,[2,97]),o($VL,[2,91]),o($VL,[2,93]),o($VV,[2,41]),o($VV,[2,67]),o($VJ,[2,50]),o($Vx,[2,44]),o($VO,[2,43]),o($Vx,$Vy,{40:138,59:$Vz,67:$VA,68:$VB,69:$VC}),{38:[1,139]},{48:[1,140]},{70:[1,141]},o($VT,[2,84]),o($Vx,[2,88]),o($VJ,[2,48]),o($Vx,[2,45]),{48:[1,142],49:143,76:$Vv},o($VJ,[2,56]),o($Vx,[2,81]),o($VJ,[2,51]),o($VJ,[2,53],{48:[1,144]}),{50:[1,145]},{48:[1,146]},o($VJ,[2,54])],
+table: [{3:1,4:2,5:[2,2],6:3,7:4,8:5,11:$V0,13:$V1,14:$V2,15:$V3},{1:[3]},{5:[1,10]},{5:[2,3],7:11,8:5,11:$V0,13:$V1,14:$V2,15:$V3},o($V4,[2,4]),o($V5,$V6,{9:12,12:13,22:$V7}),{12:15,22:$V7},o($V8,[2,9]),o($V8,[2,10]),o($V8,[2,11]),{1:[2,1]},o($V4,[2,5]),o($V4,[2,7],{10:16,16:17,17:$V9,19:$Va,21:$Vb}),o($V5,[2,18],{22:$Vc}),{23:[1,22]},o($V4,[2,8],{22:$Vc}),o($V4,[2,6],{16:23,17:$V9,19:$Va,21:$Vb}),o($V5,[2,12]),{18:24,24:[1,25]},{20:26,23:$Vd,26:27,27:28,28:29,29:30,30:31,31:$Ve,32:$Vf,33:34,34:35,35:36,36:37,37:$Vg,38:$Vh,39:38,46:$Vi,48:40,49:$Vj,50:49,58:$Vk,62:$Vl,63:$Vm,64:$Vn,65:$Vo,66:$Vp,67:$Vq,71:$Vr,72:$Vs,74:$Vt,76:$Vu,77:$Vv},o($V5,$V6,{12:13,9:58,22:$V7}),{23:[1,59]},{22:[1,60]},o($V5,[2,13]),o($V5,[2,14],{25:[1,61]}),o($Vw,[2,21]),o($V5,[2,15],{27:28,28:29,29:30,30:31,33:34,34:35,35:36,36:37,39:38,48:40,50:49,26:62,23:$Vd,31:$Ve,32:$Vf,37:$Vg,38:$Vh,46:$Vi,49:$Vj,58:$Vk,62:$Vl,63:$Vm,64:$Vn,65:$Vo,66:$Vp,67:$Vq,71:$Vr,72:$Vs,74:$Vt,76:$Vu,77:$Vv}),o($Vx,[2,23]),o($Vx,[2,25]),o($Vx,[2,26]),o($Vx,[2,27]),o($Vx,[2,28]),o($Vx,[2,29]),o($Vx,[2,30]),o($Vx,[2,31]),o($Vx,[2,32]),o($Vx,[2,33]),o($Vx,[2,34]),o([41,58,62,63,64,65,66,67],$Vy,{40:63,60:$Vz,68:$VA,69:$VB,70:$VC}),{27:69,39:38,43:68,48:70,49:$Vj,50:49,58:$Vk,62:$Vl,63:$Vm,64:$Vn,65:$Vo,66:$Vp,67:$Vq,77:$Vv},{38:$VD,46:[1,71],49:$VE,50:75,52:72,77:$Vv},{49:$VF,53:76,55:77,57:$VG,58:$VH,59:$VI},o($Vx,[2,35]),{37:[1,82],38:[1,83]},{49:[1,84]},{22:[1,86],73:85},{75:[1,87]},{49:[1,89],62:[1,90],76:[1,88]},o($VJ,[2,47]),o($VJ,[2,48],{49:[1,91]}),o($VK,[2,69]),o($VK,[2,70]),o($VK,[2,71]),o($VK,[2,72]),o($VK,[2,73]),o($VK,[2,74]),o($VK,[2,75]),o($VL,[2,96],{78:92,76:[1,93],80:[1,94],81:[1,95]}),o($V5,[2,16]),{22:[1,96]},o($V8,[2,19]),{24:[1,97]},o($Vx,[2,24]),{41:[1,98],48:99,58:$Vk,62:$Vl,63:$Vm,64:$Vn,65:$Vo,66:$Vp,67:$Vq},o($VM,[2,76]),o($VM,[2,77]),o($VM,[2,78]),o($VM,[2,79]),{44:$VN,45:$VO,47:[1,100]},o($VP,[2,42]),{38:$VD,49:$VE,50:75,52:72,77:$Vv},{27:69,39:38,43:103,48:70,49:$Vj,50:49,58:$Vk,62:$Vl,63:$Vm,64:$Vn,65:$Vo,66:$Vp,67:$Vq,77:$Vv},o($VJ,[2,50]),{49:$VF,53:104,55:77,57:$VG,58:$VH,59:$VI},o($VJ,[2,53]),o($VJ,[2,56],{49:[1,105]}),o($Vx,$VQ,{54:106,60:$VR}),o($VS,[2,66],{56:108,61:[1,109]}),o($VT,[2,60]),o($VT,[2,61]),o($VT,[2,62]),o($VT,[2,63]),{23:[1,111],37:[1,110],38:[1,112]},{37:[1,113],38:[1,114]},{25:[1,116],71:[1,115]},{25:[1,118],72:[1,117]},o($VU,[2,84]),{74:[1,119]},o($Vx,[2,87]),{76:[1,120]},{49:[1,121]},{51:[1,122]},o($VV,[2,97],{79:123,82:[1,124]}),o($VL,[2,91],{76:[1,125]}),o($VL,[2,93],{80:[1,126]}),o($VL,[2,95]),o($V8,[2,20]),o($Vw,[2,22]),{42:127,49:[1,128]},{38:$VD,49:$VE,50:75,52:129,77:$Vv},o($Vx,$Vy,{40:130,60:$Vz,68:$VA,69:$VB,70:$VC}),{27:131,39:38,48:70,49:$Vj,50:49,58:$Vk,62:$Vl,63:$Vm,64:$Vn,65:$Vo,66:$Vp,67:$Vq,77:$Vv},{27:132,39:38,48:70,49:$Vj,50:49,58:$Vk,62:$Vl,63:$Vm,64:$Vn,65:$Vo,66:$Vp,67:$Vq,77:$Vv},{44:$VN,45:$VO,47:[1,133]},{38:$VQ,54:134,60:$VR},{51:[1,135]},o($Vx,[2,58]),o($Vx,[2,65]),o($VS,[2,59]),o($VS,[2,67]),o($Vx,[2,36]),o($Vx,[2,37]),o($Vx,[2,39]),o($Vx,[2,38]),o($Vx,[2,40]),o($Vx,[2,81]),{49:[1,136]},o($Vx,[2,83]),{22:[1,137]},o($Vx,[2,86]),o($Vx,[2,88]),{76:[1,138]},{49:[1,139]},o($VV,[2,90]),o($VV,[2,98]),o($VL,[2,92]),o($VL,[2,94]),o($VW,[2,41]),o($VW,[2,68]),o($VJ,[2,51]),o($Vx,[2,45]),o($VP,[2,43]),o($VP,[2,44]),o($Vx,$Vy,{40:140,60:$Vz,68:$VA,69:$VB,70:$VC}),{38:[1,141]},{49:[1,142]},{71:[1,143]},o($VU,[2,85]),o($Vx,[2,89]),o($VJ,[2,49]),o($Vx,[2,46]),{49:[1,144],50:145,77:$Vv},o($VJ,[2,57]),o($Vx,[2,82]),o($VJ,[2,52]),o($VJ,[2,54],{49:[1,146]}),{51:[1,147]},{49:[1,148]},o($VJ,[2,55])],
 defaultActions: {10:[2,1]},
 parseError: function parseError(str, hash) {
     if (hash.recoverable) {
@@ -882,53 +882,53 @@ options: {},
 performAction: function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
 var YYSTATE=YY_START;
 switch($avoiding_name_collisions) {
-case 0: this.begin('notes'); return 19;
+case 0: this.begin('notes'); return 19; 
 break;
-case 1: this.begin('options'); return 13;
+case 1: this.begin('options'); return 13; 
 break;
-case 2: this.begin('options'); return 14;
+case 2: this.begin('options'); return 14; 
 break;
-case 3: this.begin('options'); return 15;
+case 3: this.begin('options'); return 15; 
 break;
-case 4: this.begin('options'); return 11;
+case 4: this.begin('options'); return 11; 
 break;
-case 5: this.begin('text'); return 17;
+case 5: this.begin('text'); return 17; 
 break;
-case 6: this.begin('options'); return 21;
+case 6: this.begin('options'); return 21; 
 break;
 case 7:return 22
 break;
-case 8: this.begin('annotations'); return "$"
+case 8: this.begin('annotations'); return "$" 
 break;
-case 9: this.begin('notes'); return "$"
+case 9: this.begin('notes'); return "$" 
 break;
 case 10:return 22
 break;
-case 11: this.begin('command'); return "!"
+case 11: this.begin('command'); return "!" 
 break;
-case 12: this.begin('notes'); return "!"
+case 12: this.begin('notes'); return "!" 
 break;
-case 13:return 74
+case 13:return 75
 break;
 case 14:return 24
 break;
 case 15:return 41
 break;
-case 16:return '+'
+case 16:return 45
 break;
 case 17:return 38
 break;
 case 18:return 23
 break;
-case 19:return 45
+case 19:return 46
 break;
-case 20:return 46
+case 20:return 47
 break;
 case 21:return 31
 break;
 case 22:return 32
 break;
-case 23:return 70
+case 23:return 71
 break;
 case 24:return 25
 break;
@@ -936,53 +936,53 @@ case 25:return 37
 break;
 case 26:return 44
 break;
-case 27:return 75
+case 27:return 76
 break;
-case 28:return 79
+case 28:return 80
 break;
-case 29:return 65
+case 29:return 66
 break;
-case 30:return 62
+case 30:return 63
 break;
-case 31:return 57
+case 31:return 58
 break;
-case 32:return 66
+case 32:return 67
 break;
-case 33:return 63
+case 33:return 64
 break;
-case 34:return 64
+case 34:return 65
 break;
-case 35:return 61
+case 35:return 62
 break;
-case 36:return 50
+case 36:return 51
 break;
-case 37:return 67
+case 37:return 68
 break;
-case 38:return 68
+case 38:return 69
 break;
-case 39:return 69
+case 39:return 70
 break;
-case 40:return 59
+case 40:return 60
 break;
-case 41:return 48
+case 41:return 49
 break;
-case 42:return 58
+case 42:return 59
 break;
-case 43:return 56
+case 43:return 57
 break;
-case 44:return 57
+case 44:return 58
 break;
-case 45:return 59
+case 45:return 60
 break;
-case 46:return 60
+case 46:return 61
 break;
-case 47:return 76
+case 47:return 77
 break;
-case 48:return 80
+case 48:return 81
 break;
-case 49:return 81
+case 49:return 82
 break;
-case 50: this.begin('INITIAL');
+case 50: this.begin('INITIAL'); 
 break;
 case 51:/* skip whitespace */
 break;

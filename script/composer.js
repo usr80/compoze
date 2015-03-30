@@ -63,9 +63,7 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
   if (this.editor == "true") {
     this.text_area = $('<textarea></textarea>').addClass("editor").
       val(this.code);
-    this.editor_error = $('<md-toast></md-toast>').addClass("md-default-theme md-top md-right has-error");
     $(sel).addClass('has-editor');
-    $(sel).append($('<p/>')).append(this.editor_error);
     $(sel).append($('<p/>')).append(this.text_area);
     this.text_area.width(this.editor_width);
     this.text_area.height(this.editor_height);

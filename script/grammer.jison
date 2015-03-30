@@ -293,6 +293,8 @@ chord_line
     { $$ = $1 }
   | chord_line '.' line
     { $$ = [].concat($1, $3) }
+  | chord_line '+' line
+    { $$ = [].concat($1, $3) }
   ;
 
 chord

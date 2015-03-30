@@ -4,7 +4,7 @@ jade :
 
 compile :
 	jison script/grammer.jison -o script/grammer.js
-	browserify -t coffeeify  script/composer.js -o composer.js
+	browserify -t coffeeify  script/compoze.js -o compoze.js
 
 
 deploy :

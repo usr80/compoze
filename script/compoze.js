@@ -61,8 +61,7 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
 
   var that = this;
   if (this.editor == "true") {
-    this.text_area = $('<textarea></textarea>').addClass("editor").
-      val(this.code);
+    this.text_area = $('<textarea></textarea>').addClass("editor").val(this.code);
     $(sel).addClass('has-editor');
     $(sel).append($('<p/>')).append(this.text_area);
     this.text_area.width(this.editor_width);
@@ -78,7 +77,9 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
             }
           }, 250);
     });
-  } if (this.show_errors == "true") {
+  }
+
+  if (this.show_errors == "true") {
     this.editor_error = $('<md-toast></md-toast>').addClass("md-default-theme md-top md-right")
     $(sel).append($('<p/>')).append(this.editor_error);
   }
@@ -116,6 +117,7 @@ Vex.Flow.TabDiv.prototype.parseInternal = function() {
     this.parser.parse(this.code);
     this.editor_error.empty().hide();
   } catch (e) {
+    console.log(e)
     if (this.editor_error) {
       this.editor_error.empty().show();
       this.editor_error.append(

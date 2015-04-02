@@ -7,6 +7,10 @@ html(lang="zh-CN")
     link(rel="stylesheet",href="../style/base.css")
     link(rel="stylesheet",href="../style/font.css")
 
+    link(rel="stylesheet",href="../codemirror/lib/codemirror.css")
+    script(src="../codemirror/lib/codemirror.js")
+    script(src="../codemirror/mode/javascript/javascript.js")
+
     style.
       .CodeMirror {
           line-height: 1;
@@ -19,7 +23,6 @@ html(lang="zh-CN")
           font-size: 12px;
         }
   body
-
     div#start.start.icon &#xe602;
     div#stop.stop.icon.hidden &#xe601;
     div(style="text-align:center")
@@ -148,9 +151,9 @@ html(lang="zh-CN")
       div
 
     script(src="../../compoze.js")
-    script(src="../../script/MIDI/MIDI.min.js")
-    script(src="../../script/inc/Base64.js")
-    script(src="../../script/inc/base64binary.js")
+    script(src="../MIDI/MIDI.min.js")
+    script(src="../inc/Base64.js")
+    script(src="../inc/base64binary.js")
     script.
       document.getElementById('player').innerHTML = document.getElementById('player').innerHTML.replace(/width=\d+/g, 'width='+window.innerWidth/2)
       instance = new Vex.Flow.TabDiv(document.getElementById('player'),

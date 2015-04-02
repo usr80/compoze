@@ -147,10 +147,10 @@ html(lang="zh-CN")
       div
       div
 
-    script(src="../../compoze.js")
-    script(src="../../script/MIDI/MIDI.min.js")
-    script(src="../../script/inc/Base64.js")
-    script(src="../../script/inc/base64binary.js")
+    script(src="../../dist/compoze.js")
+    script(src="../../lib/MIDI/MIDI.min.js")
+    script(src="../../lib/inc/Base64.js")
+    script(src="../../lib/inc/base64binary.js")
     script.
       document.getElementById('player').innerHTML = document.getElementById('player').innerHTML.replace(/width=\d+/g, 'width='+window.innerWidth/2)
       instance = new Vex.Flow.TabDiv(document.getElementById('player'),

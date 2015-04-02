@@ -4,39 +4,121 @@ html(lang="zh-CN")
     meta(charset="utf-8")
     title composer
     meta(name="viewport",content="width=device-width, initial-scale=1")
-    link(rel="stylesheet",href="app/style/base.css")
-    link(rel="stylesheet",href="app/style/font.css")
+    link(rel="stylesheet",href="demo/style/base.css")
+    link(rel="stylesheet",href="demo/style/font.css")
     style.
       a{
         text-decoration:none;
         color: #666;
         font-size:18px;
       }
+      div#player {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        color: #554;
+        white-space: pre;
+      }
+
+      div#player .editor {
+        outline: none;
+        background: #f0f4f4;
+        border: 0 solid;
+        border-left: 6px solid #ccc;
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 12px;
+      }
+
+      div#player .editor-error .text {
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 12px;
+        color: red;
+        padding: 3px;
+      }
+
+      div#player .title {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        padding: 10px;
+        color: #554;
+      }
+
   body
 
-    a(href="app/html/player.html")
-      div.logo.icon &#xe600;
+    div#start.start.icon &#xe602;
+    div#stop.stop.icon.hidden &#xe601;
 
 
-    div(style="text-align:center;margin-top:80px;")
-      a(href="app/html/player.html")
-        span.icon &#xe603;
-        |&nbsp;
-        |播放模式
-    div(style="text-align:center;margin-top:80px;")
-      a(href="app/html/editor.html")
-        span.icon &#xe604;
-        |&nbsp;
-        |编辑模式
+    br
+    center
+      img(src="demo/resource/compoze.png",width="200px")
 
-    div(style="text-align:center;margin-top:80px;")
-      a(href="app/html/helper.html")
-        span.icon &#xe605;
-        |&nbsp;
-        |语法介绍
-    .loading.line-scale
+      br
+      h1(style="color:#999") write music easier
+
+    br
+    center
+      span(style="text-align:center;margin:50px;")
+        a(href="demo/html/player.html")
+          span.icon &#xe603;
+          |&nbsp;
+          |播放模式
+
+
+      span(style="text-align:center;margin:50px;")
+        a(href="demo/html/editor.html")
+          span.icon &#xe604;
+          |&nbsp;
+          |编辑模式
+
+      span(style="text-align:center;margin:50px;")
+        a(href="demo/html/helper.html")
+          span.icon &#xe605;
+          |&nbsp;
+          |语法介绍
+
+    center
+      div#player.hidden(editor="true",editor_width="460",editor_height="150").
+        options player=true tempo=90 width=480
+        tabstave notation=true tablature=true
+          notes :8 (8/1+0/5) (12/2+12/3) 8/1 (12/2+12/3) 8/1 |
+          notes :8 (3/1+0/2+3/6) 0/4 0/3 0/4 (0/2+0/3)
+          tabstave notation=true tablature=true
+          notes :8 (5/1+8/5) 8/2 5/1 8/2 5/1 |
+          notes :8 (0/1+3/5) 2/4 1/2 0/1 1/2
+
+    #loading.loading.line-scale
       div
       div
       div
       div
       div
+    script.
+      var loading = document.getElementById('loading');
+      loading.style.display = 'block'
+    script(src="../../dist/compoze.js")
+    script(src="lib/MIDI/MIDI.min.js")
+    script(src="lib/inc/Base64.js")
+    script(src="lib/inc/base64binary.js")
+
+    script.
+      instances = new Vex.Flow.TabDiv(document.getElementById('player'),
+          {
+              instrument: 'acoustic_guitar_steel',
+              soundfont_url: "http://yuepuso.qiniudn.com/"
+          }
+      );
+      document.getElementById('player').style.display = 'block'
+
+      $('#start').on('click',function(){
+        instances.player.play()
+        $('#stop').show()
+        $('#start').hide()
+      })
+      $('#stop').on('click',function(){
+        instances.player.stop()
+        $('#start').show()
+        $('#stop').hide()
+
+      })
+      //- $('#start').click()
+      loading.style.display = 'none'

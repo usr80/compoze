@@ -1382,7 +1382,7 @@ Vex.Flow.TabDiv = function(sel, options) {
   if (arguments.length > 0) this.init(sel, options);
 }
 
-Vex.Flow.TabDiv.SEL = ".vex-tabdiv";
+Vex.Flow.TabDiv.SEL = ".compoze";
 Vex.Flow.TabDiv.ERROR_NOCANVAS =
   "<b>This browser does not support HTML5 Canvas</b><br/>" +
   "Please use a modern browser such as <a href='http://google.com/chrome'>" +
@@ -1393,6 +1393,9 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
 
   // Grab code and clear tabdiv
   this.code = $(sel).text();
+  if(!this.code){
+    return
+  }
   $(sel).empty();
   if ($(sel).css("position") == "static") {
     // $(sel).css("position", "relative");
@@ -1485,9 +1488,7 @@ Vex.Flow.TabDiv.prototype.parseInternal = function() {
     this.artist.reset();
     this.parser.reset();
     this.parser.parse(this.code);
-    if (this.editor_error) {
-      this.editor_error.empty().hide();
-    }
+    this.editor_error.empty().hide();
   } catch (e) {
     console.log(e)
     if (this.editor_error) {
@@ -1618,19 +1619,19 @@ switch (yystate) {
 case 1:
 
       return $$[$0-1];
-
+    
 break;
 case 2: case 17: case 80:
- this.$ = null
+ this.$ = null 
 break;
 case 3: case 12: case 18: case 23: case 25: case 26: case 27: case 42: case 60: case 61: case 62: case 63: case 68:
- this.$ = $$[$0]
+ this.$ = $$[$0] 
 break;
 case 4: case 84:
- this.$ = [$$[$0]]
+ this.$ = [$$[$0]] 
 break;
 case 5:
- this.$ = [].concat($$[$0-1], $$[$0])
+ this.$ = [].concat($$[$0-1], $$[$0]) 
 break;
 case 6:
  this.$ = {
@@ -1641,7 +1642,7 @@ case 6:
         _l: _$[$0-2].first_line,
         _c: _$[$0-2].first_column
       }
-
+    
 break;
 case 7:
  this.$ = {
@@ -1650,7 +1651,7 @@ case 7:
         _l: _$[$0-1].first_line,
         _c: _$[$0-1].first_column
       }
-
+    
 break;
 case 8:
 
@@ -1660,7 +1661,7 @@ case 8:
         _l: _$[$0-1].first_line,
         _c: _$[$0-1].first_column
       }
-
+    
 break;
 case 13:
 
@@ -1668,7 +1669,7 @@ case 13:
       var notes = [].concat($$[$0-1].notes, $$[$0].notes);
       var slurs = [].concat($$[$0-1].slurs, $$[$0].slurs)
       this.$ = {text: text, notes: notes, slurs: slurs};
-
+    
 break;
 case 14:
 this.$ = {text: $$[$0], notes: [], slurs: []}
@@ -1686,7 +1687,7 @@ case 19:
         _l: _$[$0-2].first_line,
         _c: _$[$0-2].first_column
       }]
-
+    
 break;
 case 20:
  this.$ = [].concat($$[$0-3], [{
@@ -1695,16 +1696,16 @@ case 20:
         _l: _$[$0-2].first_line,
         _c: _$[$0-2].first_column
         }])
-
+    
 break;
 case 21:
- this.$ = [{text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}]
+ this.$ = [{text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}] 
 break;
 case 22:
- this.$ = [].concat($$[$0-2], {text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column})
+ this.$ = [].concat($$[$0-2], {text: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}) 
 break;
 case 24:
- this.$ = [].concat($$[$0-1], $$[$0])
+ this.$ = [].concat($$[$0-1], $$[$0])  
 break;
 case 28:
  this.$ = [{
@@ -1713,7 +1714,7 @@ case 28:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
         }]
-
+    
 break;
 case 29:
  this.$ = [{
@@ -1721,7 +1722,7 @@ case 29:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 30:
  this.$ = [{
@@ -1729,7 +1730,7 @@ case 30:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 31:
  this.$ = [{
@@ -1738,7 +1739,7 @@ case 31:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 32:
  this.$ = [{
@@ -1747,7 +1748,7 @@ case 32:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 33:
  this.$ = [{
@@ -1756,7 +1757,7 @@ case 33:
         _l: _$[$0].first_line,
         _c: _$[$0].first_column
       }]
-
+    
 break;
 case 34:
 
@@ -1764,48 +1765,48 @@ case 34:
         command: "rest",
         params: $$[$0]
       }]
-
+    
 break;
 case 35:
- this.$ = 'single'
+ this.$ = 'single' 
 break;
 case 36:
- this.$ = 'double'
+ this.$ = 'double' 
 break;
 case 37:
- this.$ = 'end'
+ this.$ = 'end' 
 break;
 case 38:
- this.$ = 'repeat-end'
+ this.$ = 'repeat-end' 
 break;
 case 39:
- this.$ = 'repeat-begin'
+ this.$ = 'repeat-begin' 
 break;
 case 40:
- this.$ = 'repeat-both'
+ this.$ = 'repeat-both' 
 break;
 case 41:
 
       _.extend(_.last($$[$0-3]), {decorator: $$[$0-2]})
       _.each($$[$0-3], function(fret) { fret['string'] = $$[$0] })
       this.$ = $$[$0-3]
-
+    
 break;
 case 43: case 44: case 85:
- this.$ = [].concat($$[$0-2], $$[$0])
+ this.$ = [].concat($$[$0-2], $$[$0]) 
 break;
 case 45:
- this.$ = [{chord: $$[$0-2], decorator: $$[$0]}]
+ this.$ = [{chord: $$[$0-2], decorator: $$[$0]}] 
 break;
 case 46:
- this.$ = [{chord: $$[$0-2], articulation: $$[$0-4], decorator: $$[$0]}]
+ this.$ = [{chord: $$[$0-2], articulation: $$[$0-4], decorator: $$[$0]}] 
 break;
 case 47:
  this.$ = [{
         fret: $$[$0],
         _l: _$[$0].first_line,
         _c: _$[$0].first_column}]
-
+    
 break;
 case 48:
  this.$ = [{abc: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}]
@@ -1815,7 +1816,7 @@ case 49:
              fret: $$[$0], _l: _$[$0-3].first_line, _c: _$[$0-3].first_column}]
 break;
 case 50:
- this.$ = [_.extend($$[$0], {articulation: $$[$0-1]})]
+ this.$ = [_.extend($$[$0], {articulation: $$[$0-1]})] 
 break;
 case 51:
 
@@ -1823,7 +1824,7 @@ case 51:
       _.extend($$[$0], {articulation: $$[$0-1]})
       $$[$0-3].push($$[$0])
       this.$ = $$[$0-3]
-
+    
 break;
 case 52:
  this.$ = {
@@ -1831,7 +1832,7 @@ case 52:
       _l: _$[$0-4].first_line, _c: _$[$0-4].first_column}
 break;
 case 53:
- this.$ = {fret: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}
+ this.$ = {fret: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column} 
 break;
 case 54:
  this.$ = {time: $$[$0-3], dot: $$[$0-2], abc: $$[$0]}
@@ -1840,101 +1841,101 @@ case 55:
  this.$ = {time: $$[$0-6], dot: $$[$0-5], abc: $$[$0-3], octave: $$[$0-2], fret: $$[$0]}
 break;
 case 56:
- this.$ = {abc: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column}
+ this.$ = {abc: $$[$0], _l: _$[$0].first_line, _c: _$[$0].first_column} 
 break;
 case 57:
  this.$ = {abc: $$[$0-3], octave: $$[$0-2],
-            fret: $$[$0], _l: _$[$0-3].first_line, _c: _$[$0-3].first_column}
+            fret: $$[$0], _l: _$[$0-3].first_line, _c: _$[$0-3].first_column} 
 break;
 case 58:
- this.$ = {time: $$[$0-1], dot: $$[$0]}
+ this.$ = {time: $$[$0-1], dot: $$[$0]} 
 break;
 case 59:
- this.$ = $$[$0-1] + $$[$0]
+ this.$ = $$[$0-1] + $$[$0] 
 break;
 case 64:
- this.$ = false
+ this.$ = false 
 break;
 case 65:
- this.$ = true
+ this.$ = true 
 break;
 case 66:
- this.$ = ''
+ this.$ = '' 
 break;
 case 67: case 70:
- this.$ = 's'
+ this.$ = 's' 
 break;
 case 69:
- this.$ = '-'
+ this.$ = '-' 
 break;
 case 71:
- this.$ = 't'
+ this.$ = 't' 
 break;
 case 72:
- this.$ = 'T'
+ this.$ = 'T' 
 break;
 case 73:
- this.$ = 'b'
+ this.$ = 'b' 
 break;
 case 74:
- this.$ = 'h'
+ this.$ = 'h' 
 break;
 case 75:
- this.$ = 'p'
+ this.$ = 'p' 
 break;
 case 76:
- this.$ = 'v'
+ this.$ = 'v' 
 break;
 case 77:
- this.$ = 'V'
+ this.$ = 'V' 
 break;
 case 78:
- this.$ = 'u'
+ this.$ = 'u' 
 break;
 case 79:
- this.$ = 'd'
+ this.$ = 'd' 
 break;
 case 81:
- this.$ = {tuplet: $$[$0-1]}
+ this.$ = {tuplet: $$[$0-1]} 
 break;
 case 82:
- this.$ = {tuplet: $$[$0-3], notes: $$[$0-1]}
+ this.$ = {tuplet: $$[$0-3], notes: $$[$0-1]} 
 break;
 case 83: case 86:
- this.$ = $$[$0-1]
+ this.$ = $$[$0-1] 
 break;
 case 87:
- this.$ = {position: 0}
+ this.$ = {position: 0} 
 break;
 case 88:
- this.$ = {position: $$[$0-1]}
+ this.$ = {position: $$[$0-1]} 
 break;
 case 89:
- this.$ = {position: $$[$0-1] * -1}
+ this.$ = {position: $$[$0-1] * -1} 
 break;
 case 90:
- this.$ = {key: $$[$0-2], accidental: $$[$0-1], accidental_type: $$[$0]}
+ this.$ = {key: $$[$0-2], accidental: $$[$0-1], accidental_type: $$[$0]} 
 break;
 case 91:
- this.$ = "#"
+ this.$ = "#" 
 break;
 case 92:
- this.$ = "##"
+ this.$ = "##" 
 break;
 case 93:
- this.$ = "b"
+ this.$ = "b" 
 break;
 case 94:
- this.$ = "bb"
+ this.$ = "bb" 
 break;
 case 95:
- this.$ = "n"
+ this.$ = "n" 
 break;
 case 97:
- this.$ = null;
+ this.$ = null; 
 break;
 case 98:
- this.$ = "c"
+ this.$ = "c" 
 break;
 }
 },
@@ -2414,31 +2415,31 @@ options: {},
 performAction: function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
 var YYSTATE=YY_START;
 switch($avoiding_name_collisions) {
-case 0: this.begin('notes'); return 19;
+case 0: this.begin('notes'); return 19; 
 break;
-case 1: this.begin('options'); return 13;
+case 1: this.begin('options'); return 13; 
 break;
-case 2: this.begin('options'); return 14;
+case 2: this.begin('options'); return 14; 
 break;
-case 3: this.begin('options'); return 15;
+case 3: this.begin('options'); return 15; 
 break;
-case 4: this.begin('options'); return 11;
+case 4: this.begin('options'); return 11; 
 break;
-case 5: this.begin('text'); return 17;
+case 5: this.begin('text'); return 17; 
 break;
-case 6: this.begin('options'); return 21;
+case 6: this.begin('options'); return 21; 
 break;
 case 7:return 22
 break;
-case 8: this.begin('annotations'); return "$"
+case 8: this.begin('annotations'); return "$" 
 break;
-case 9: this.begin('notes'); return "$"
+case 9: this.begin('notes'); return "$" 
 break;
 case 10:return 22
 break;
-case 11: this.begin('command'); return "!"
+case 11: this.begin('command'); return "!" 
 break;
-case 12: this.begin('notes'); return "!"
+case 12: this.begin('notes'); return "!" 
 break;
 case 13:return 75
 break;
@@ -2514,7 +2515,7 @@ case 48:return 81
 break;
 case 49:return 82
 break;
-case 50: this.begin('INITIAL');
+case 50: this.begin('INITIAL'); 
 break;
 case 51:/* skip whitespace */
 break;
@@ -2827,7 +2828,10 @@ Vex.Flow.Player = (function() {
       this.playNote(this.all_ticks[this.next_index].notes);
       this.next_index++;
       if (this.next_index >= this.all_ticks.length) {
-        return this.done = true;
+        this.done = true;
+        if (this.onEnd) {
+          return this.onEnd();
+        }
       } else {
         return this.next_event_tick = this.all_ticks[this.next_index].tick.value();
       }
@@ -24492,14 +24496,14 @@ Vex.Flow.Fraction = (function() {
 
       return (a.numerator === b.numerator) && (a.denominator === b.denominator);
     },
-
+    
     // Greater than operator.
     greaterThan: function(compare) {
       var a = Vex.Flow.Fraction.__compareB.copy(this);
       a.subtract(compare);
       return (a.numerator > 0);
     },
-
+    
     // Greater than or equals operator.
     greaterThanEquals: function(compare) {
       var a = Vex.Flow.Fraction.__compareB.copy(this);
@@ -24509,12 +24513,12 @@ Vex.Flow.Fraction = (function() {
 
     // Less than operator.
     lessThan: function(compare) {
-      return !(this.greaterThanEquals(compare));
+      return !(this.greaterThanEquals(compare));  
     },
 
     // Less than or equals operator.
     lessThanEquals: function(compare) {
-      return !(this.greaterThan(compare));
+      return !(this.greaterThan(compare));  
     },
 
     // Creates a new copy with this current values.
@@ -24639,7 +24643,7 @@ Vex.Flow.clefProperties.values = {
 /*
   Take a note in the format "Key/Octave" (e.g., "C/5") and return properties.
 
-  The last argument, params, is a struct the currently can contain one option,
+  The last argument, params, is a struct the currently can contain one option, 
   octave_shift for clef ottavation (0 = default; 1 = 8va; -1 = 8vb, etc.).
 */
 Vex.Flow.keyProperties = function(key, clef, params) {
@@ -26770,7 +26774,7 @@ Vex.Flow.TickContext = (function() {
       this.extraLeftPx = 0;  // Extra left pixels for modifers & displace notes
       this.extraRightPx = 0; // Extra right pixels for modifers & displace notes
       this.align_center = false;
-
+      
       this.tContexts = [];   // Parent array of tick contexts
 
       // Ignore this tick context for formatting and justification
@@ -26792,7 +26796,7 @@ Vex.Flow.TickContext = (function() {
     getMaxTicks: function() { return this.maxTicks; },
     getMinTicks: function() { return this.minTicks; },
     getTickables: function() { return this.tickables; },
-
+    
     getCenterAlignedTickables: function() {
       return this.tickables.filter(function(tickable) {
         return tickable.isCenterAligned();
@@ -27590,8 +27594,8 @@ Vex.Flow.NoteHead = (function() {
           ctx.fillRect(
             head_x - this.render_options.stroke_px, line_y,
             (this.getGlyph().head_width) +
-            (this.render_options.stroke_px * 2), 1);
-        }
+            (this.render_options.stroke_px * 2), 1);    
+        }        
       }
 
       if (this.note_type == "s") {
@@ -27992,7 +27996,7 @@ Vex.Flow.StemmableNote = (function(){
     drawStem: function(stem_struct){
       if (!this.context) throw new Vex.RERR("NoCanvasContext",
           "Can't draw without a canvas context.");
-
+      
       this.setStem(new Stem(stem_struct));
       this.stem.setContext(this.context).draw();
     }
@@ -29502,7 +29506,7 @@ Vex.Flow.ClefNote = (function() {
   Vex.Inherit(ClefNote, Vex.Flow.Note, {
     init: function(clef, size, annotation) {
       ClefNote.superclass.init.call(this, {duration: "b"});
-
+      
       this.setClef(clef, size, annotation);
 
       // Note properties
@@ -29546,7 +29550,7 @@ Vex.Flow.ClefNote = (function() {
 
     draw: function() {
       if (!this.stave) throw new Vex.RERR("NoStave", "Can't draw without a stave.");
-
+      
       if (!this.glyph.getContext()) {
         this.glyph.setContext(this.context);
       }
@@ -29556,7 +29560,7 @@ Vex.Flow.ClefNote = (function() {
       this.glyph.setYShift(
         this.stave.getYForLine(this.clef.line) - this.stave.getYForGlyphs());
       this.glyph.renderToStave(abs_x);
-
+      
       // If the Vex.Flow.Clef has an annotation, such as 8va, draw it.
       if (this.clef_obj.annotation !== undefined) {
         var attachment = new Vex.Flow.Glyph(this.clef_obj.annotation.code, this.clef_obj.annotation.point);
@@ -29569,7 +29573,7 @@ Vex.Flow.ClefNote = (function() {
         attachment.setXShift(this.clef_obj.annotation.x_shift);
         attachment.renderToStave(abs_x);
       }
-
+      
     }
   });
 
@@ -29620,7 +29624,7 @@ Vex.Flow.TimeSigNote = (function() {
 
     draw: function() {
       if (!this.stave) throw new Vex.RERR("NoStave", "Can't draw without a stave.");
-
+      
       if (!this.timeSig.glyph.getContext()) {
         this.timeSig.glyph.setContext(this.context);
       }
@@ -30021,7 +30025,7 @@ Vex.Flow.Beam = (function() {
     preFormat: function() { return this; },
 
     // Post-format the beam. This can only be called after
-    // the notes in the beam have both `x` and `y` values. ie: they've
+    // the notes in the beam have both `x` and `y` values. ie: they've 
     // been formatted and have staves
     postFormat: function() {
       if (this.postFormatted) return;
@@ -30513,7 +30517,7 @@ Vex.Flow.Voice = (function() {
     // Set the voice group
     setVoiceGroup: function(g) { this.voiceGroup = g; return this; },
 
-    // Set the voice mode to strict or soft
+    // Set the voice mode to strict or soft 
     setStrict: function(strict) {
       this.mode = strict ? Vex.Flow.Voice.Mode.STRICT : Vex.Flow.Voice.Mode.SOFT;
       return this;
@@ -33472,7 +33476,7 @@ Vex.Flow.KeySignature = (function() {
       return this;
     },
 
-    // Add the key signature to the `stave`. You probably want to use the
+    // Add the key signature to the `stave`. You probably want to use the 
     // helper method `.addToStave()` instead
     addModifier: function(stave) {
       this.convertAccLines(stave.clef, this.accList[0].type);
@@ -34227,7 +34231,7 @@ Vex.Flow.Music = (function() {
     },
 
     // Create a scale map that represents the pitch state for a
-    // `keySignature`. For example, passing a `G` to `keySignature` would
+    // `keySignature`. For example, passing a `G` to `keySignature` would 
     // return a scale map with every note naturalized except for `F` which
     // has an `F#` state.
     createScaleMap: function(keySignature) {
@@ -34674,7 +34678,7 @@ Vex.Flow.RaphaelContext = (function() {
       // can no longer be used as an option in an Element.attr() call.
       // It is preserved here for users running earlier versions of
       // Raphael.JS, though it has no effect on the SVG output in
-      // Raphael 2 and higher.
+      // Raphael 2 and higher. 
       this.attributes.transform = "S" + x + "," + y + ",0,0";
       this.attributes.scale = x + "," + y + ",0,0";
       this.attributes.font = this.state.font_size * this.state.scale.x + "pt " +
@@ -34858,7 +34862,7 @@ Vex.Flow.RaphaelContext = (function() {
             opacity: +((sa.opacity || 0.3) / num_paths).toFixed(3),
             // See note in this.scale(): In Raphael the scale() method
             // is deprecated and removed as of Raphael 2.0 and replaced
-            // by the transform() method.  It is preserved here for
+            // by the transform() method.  It is preserved here for 
             // users with earlier versions of Raphael, but has no effect
             // on the output SVG in Raphael 2.0+.
             transform: this.attributes.transform,
@@ -34878,9 +34882,9 @@ Vex.Flow.RaphaelContext = (function() {
     },
 
     stroke: function() {
-      // The first line of code below is, unfortunately, a bit of a hack:
+      // The first line of code below is, unfortunately, a bit of a hack: 
       // Raphael's transform() scaling does not scale the stroke-width, so
-      // in order to scale a stroke, we have to manually scale the
+      // in order to scale a stroke, we have to manually scale the 
       // stroke-width.
       //
       // This works well so long as the X & Y states for this.scale() are
@@ -34889,10 +34893,10 @@ Vex.Flow.RaphaelContext = (function() {
       // stroke-widths.
       //
       // In the future, if we want to support very divergent values for
-      // horizontal and vertical scaling, we may want to consider
-      // implementing SVG scaling with properties of the SVG viewBox &
+      // horizontal and vertical scaling, we may want to consider 
+      // implementing SVG scaling with properties of the SVG viewBox & 
       // viewPort and removing it entirely from the Element.attr() calls.
-      // This would more closely parallel the approach taken in
+      // This would more closely parallel the approach taken in 
       // canvascontext.js as well.
 
       var strokeWidth = this.lineWidth * (this.state.scale.x + this.state.scale.y)/2;
@@ -35930,7 +35934,7 @@ Vex.Flow.StaveText = (function() {
           else if(this.options.justification == Justification.RIGHT) {
             x += stave.getWidth() - text_width;
           }
-
+          
           if(this.position == Modifier.Position.ABOVE) {
             y = stave.getYForTopText(2) + this.options.shift_y;
           }
@@ -36404,7 +36408,7 @@ Vex.Flow.BoundingBox = (function() {
 //
 // ## Description
 //
-// `TextNote` is a notation element that is positioned in time. Generally
+// `TextNote` is a notation element that is positioned in time. Generally 
 // meant for objects that sit above/below the staff and inline with each other.
 // Examples of this would be such as dynamics, lyrics, chord changes, etc.
 Vex.Flow.TextNote = (function() {
@@ -36569,7 +36573,7 @@ Vex.Flow.TextNote = (function() {
       // Set font
       if (text_struct.font) this.font = text_struct.font;
 
-      // Determine and set initial note width. Note that the text width is
+      // Determine and set initial note width. Note that the text width is 
       // an approximation and isn't very accurate. The only way to accurately
       // measure the length of text is with `canvasContext.measureText()`
       if (this.glyph_type) {
@@ -37692,11 +37696,11 @@ Vex.Flow.StaveLine = (function() {
   };
 
   // ## Private Helpers
-  //
+  // 
   // Attribution: Arrow rendering implementations based off of
-  // Patrick Horgan's article, "Drawing lines and arcs with
+  // Patrick Horgan's article, "Drawing lines and arcs with 
   // arrow heads on  HTML5 Canvas"
-  //
+  // 
   // Draw an arrow head that connects between 3 coordinates
   function drawArrowHead(ctx, x0, y0, x1, y1, x2, y2) {
     // all cases do this.
@@ -38401,7 +38405,7 @@ Vex.Flow.PedalMarking = (function() {
       });
     },
 
-    // Render the pedal marking in position on the rendering context
+    // Render the pedal marking in position on the rendering context 
     draw: function() {
       if (!this.context) throw new Vex.RERR("NoContext",
         "Can't draw PedalMarking without a context.");
@@ -38427,8 +38431,8 @@ Vex.Flow.PedalMarking = (function() {
   };
 
   // ## Private Helper
-  //
-  // Draws a pedal glyph with the provided `name` on a rendering `context`
+  // 
+  // Draws a pedal glyph with the provided `name` on a rendering `context` 
   // at the coordinates `x` and `y. Takes into account the glyph data
   // coordinate shifts.
   function drawPedalGlyph(name, context, x, y, point) {

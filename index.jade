@@ -76,7 +76,7 @@ html(lang="zh-CN")
           |&nbsp;
           |语法介绍
 
-    center
+    div(style="position:relative;width:460px; margin:0 auto")
       div#player.hidden(editor="true",editor_width="460",editor_height="150").
         options player=true tempo=90 width=480
         tabstave notation=true tablature=true
@@ -120,5 +120,10 @@ html(lang="zh-CN")
         $('#stop').hide()
 
       })
+
+      instances.player.onEnd = function(){
+        $('#start').show()
+        $('#stop').hide()
+      }
       //- $('#start').click()
       loading.style.display = 'none'

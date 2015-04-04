@@ -212,6 +212,8 @@ class Vex.Flow.Player
       @next_index++
       if @next_index >= @all_ticks.length
         @done = true
+        if @onEnd
+          do @onEnd
       else
         @next_event_tick = @all_ticks[@next_index].tick.value()
 

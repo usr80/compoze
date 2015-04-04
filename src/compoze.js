@@ -12,7 +12,7 @@ Vex.Flow.TabDiv = function(sel, options) {
   if (arguments.length > 0) this.init(sel, options);
 }
 
-Vex.Flow.TabDiv.SEL = ".vex-tabdiv";
+Vex.Flow.TabDiv.SEL = ".compoze";
 Vex.Flow.TabDiv.ERROR_NOCANVAS =
   "<b>This browser does not support HTML5 Canvas</b><br/>" +
   "Please use a modern browser such as <a href='http://google.com/chrome'>" +
@@ -23,6 +23,9 @@ Vex.Flow.TabDiv.prototype.init = function(sel, options) {
 
   // Grab code and clear tabdiv
   this.code = $(sel).text();
+  if(!this.code){
+    return
+  }
   $(sel).empty();
   if ($(sel).css("position") == "static") {
     // $(sel).css("position", "relative");

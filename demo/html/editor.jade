@@ -6,7 +6,7 @@ html(lang="zh-CN")
     meta(name="viewport",content="width=device-width, initial-scale=1")
     link(rel="stylesheet",href="../style/base.css")
     link(rel="stylesheet",href="../style/font.css")
-    link(rel="stylesheet",href="../../editor.md/css/editormd.min.css")
+    link(rel="stylesheet",href="../../lib/editor.md/css/editormd.min.css")
 
     style.
       .CodeMirror {
@@ -169,13 +169,14 @@ html(lang="zh-CN")
     //- script(src="../../lib/MIDI/MIDI.min.js")
     //- script(src="../../lib/inc/Base64.js")
     //- script(src="../../lib/inc/base64binary.js")
-    script(src="../../editor.md/editormd.js")
+    script(src="../../lib/editor.md/editormd.js")
     script.
       $(function(){
         editormd({
           id: 'ed',
-          path: '/editor.md/lib/',
-          compoze: true
+          path: '../../lib/editor.md/lib/',
+          compoze: true,
+          compozeUrl: '/dist/compoze'
         })
 
       })

@@ -11,3 +11,6 @@ deploy :
 	jade .
 	git commit -am "deploy"
 	git push
+
+sync :
+	qrsync qiniu.conf

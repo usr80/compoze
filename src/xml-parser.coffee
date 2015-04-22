@@ -1,8 +1,8 @@
 xml2json = require 'xml2json'
 fs = require 'fs'
 
-fileName = '秒速五厘米'
-xml = fs.readFileSync '../example/' + fileName + '.xml'
+fileName = '新世纪福音战士'
+xml = fs.readFileSync '../demo/musicxml/' + fileName + '.xml'
 
 json = xml2json.toJson xml,{object:true}
 
@@ -47,7 +47,7 @@ measures.forEach (m)->
   s += 'tabstave notation=true tablature=true\n' + m + '\n'
 
 
-fs.writeFileSync '../example/' + fileName + '.md', s
+fs.writeFileSync '../demo/musicxml/' + fileName + '.md', s
 
 
 

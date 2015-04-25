@@ -10,6 +10,7 @@ http://compoze.coding.io/
 ```
  <script src="dist/compoze.js"></script>
 ```
+
 2. 自动解析.compoze 元素里面的内容,解析生成Canvas乐谱
 ```
 <div class="compoze"> 

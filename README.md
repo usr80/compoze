@@ -1,7 +1,7 @@
 
 ![compoze](http://compoze.coding.io/demo/resource/compoze.png)
 
-在线编辑创作可播放的在线乐谱
+compoze 可编辑在线乐谱
 
 http://compoze.coding.io/
 

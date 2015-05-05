@@ -1,11 +1,30 @@
-#compoze
-简介
-compoze 是通过在线的文本编辑生成基于canvas的乐谱, 并且能通过HTML5 audio api 播放.
+
+![compoze](http://compoze.coding.io/demo/resource/compoze.png)
+
+compoze 可编辑在线乐谱
+
 http://compoze.coding.io/
 
+#使用方法
+1. 加载js文件
+```
+ <script src="dist/compoze.js"></script>
+```
+
+2. 自动解析.compoze 元素里面的内容,解析生成Canvas乐谱
+```
+<div class="compoze"> 
+    tabstave notation=true tablature=false
+    notes 4-5-6/3 ## =|: 5-4-2/3 2/2 =:|
+</div>
+```
+
+更多语法请参考 [compoze语法介绍](http://compoze.coding.io/demo/html/helper.html)
+
+
 #开发指引
-安装browserify打包输出 `npm install browserify -g`
-执行命令输出 `make compile`
+安装browserify
 
+`npm install browserify -g`
 
-语言特性用到了jison作为词法分析
+执行命令 `make compile` 打包输出dist/compoze.js

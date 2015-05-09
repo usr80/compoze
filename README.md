@@ -1,9 +1,13 @@
 
 ![compoze](http://compoze.coding.io/demo/resource/compoze.png)
 
+
 compoze 可编辑在线乐谱
 
-http://compoze.coding.io/
+
+http://compoze.coding.io/ 
+
+[![Comment-on-Github.Party](https://img.shields.io/badge/Comment%20on-Github.Party-yellow.svg)](https://github.party/item?id=37)
 
 #使用方法
 1. 加载js文件

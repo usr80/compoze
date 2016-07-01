@@ -5,7 +5,7 @@
 compoze 可编辑在线乐谱
 
 
-http://compoze.coding.io/ 
+http://tan.coding.me/compoze/ 
 
 [![Comment-on-Github.Party](https://img.shields.io/badge/Comment%20on-Github.Party-yellow.svg)](https://github.party/item?id=37)
 

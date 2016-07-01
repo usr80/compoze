@@ -1,5 +1,5 @@
 
-![compoze](http://compoze.coding.io/demo/resource/compoze.png)
+![compoze](http://tan.coding.me/compoze/demo/resource/compoze.png)
 
 
 compoze 可编辑在线乐谱
@@ -23,7 +23,7 @@ http://compoze.coding.io/
 </div>
 ```
 
-更多语法请参考 [compoze语法介绍](http://compoze.coding.io/demo/html/helper.html)
+更多语法请参考 [compoze语法介绍](http://tan.coding.me/compoze/demo/html/helper.html)
 
 
 #开发指引

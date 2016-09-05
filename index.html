@@ -46,35 +46,7 @@ tabstave notation=true tablature=true
 
 
 
-</div><script>var loading = document.getElementById('loading');
-loading.style.display = 'block'</script><script src="dist/compoze.js"></script><script src="lib/MIDI/MIDI.min.js"></script><script src="lib/inc/Base64.js"></script><script src="lib/inc/base64binary.js"></script><script>instances = new Vex.Flow.TabDiv(document.getElementById('player'),
-    {
-        instrument: 'acoustic_guitar_steel',
-        soundfont_url: "http://yuepuso.qiniudn.com/"
-    }
-);
-document.getElementById('player').style.display = 'block'
-
-$('#start').on('click',function(){
-  instances.player.play()
-  $('#stop').show()
-  $('#start').hide()
-})
-$('#stop').on('click',function(){
-  instances.player.stop()
-  $('#start').show()
-  $('#stop').hide()
-
-})
-
-instances.player.onEnd = function(){
-  $('#start').show()
-  $('#stop').hide()
-}
-//- $('#start').click()
-loading.style.display = 'none'</script>
-
-
+</div> 
 
 <div style="text-align:center">
 <a href="www.miitbeian.gov.cn">粤ICP备16054539号</a>
